@@ -1,0 +1,89 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: "Segoe UI", system-ui, Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 50px 16px;
+  background: linear-gradient(135deg, #0f172a, #1e3a5f);
+  color: #1e293b;
+}
+
+.app {
+  width: 100%;
+  max-width: 460px;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+}
+
+h1 { font-size: 1.7rem; color: #0f172a; }
+.date { color: #64748b; font-size: 0.9rem; margin-bottom: 20px; }
+
+/* Add form */
+.add { display: flex; gap: 8px; margin-bottom: 16px; }
+.add input {
+  flex: 1;
+  padding: 12px 14px;
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
+  font-size: 1rem;
+  outline: none;
+}
+.add input:focus { border-color: #0284c7; }
+.add button {
+  padding: 0 20px;
+  border: 0;
+  border-radius: 10px;
+  background: #0284c7;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.add button:hover { background: #0369a1; }
+
+/* Filters */
+.filters { display: flex; gap: 8px; margin-bottom: 14px; }
+.filters button {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: #f8fafc;
+  color: #475569;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+.filters button.active { background: #0f172a; color: #fff; border-color: #0f172a; }
+
+/* Task list */
+.list { list-style: none; }
+.list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 4px;
+  border-bottom: 1px solid #f1f5f9;
+}
+.list input[type="checkbox"] { width: 18px; height: 18px; cursor: pointer; accent-color: #0284c7; }
+.list .text { flex: 1; word-break: break-word; }
+.list li.done .text { text-decoration: line-through; color: #94a3b8; }
+.list .delete {
+  border: 0;
+  background: none;
+  color: #ef4444;
+  font-size: 1.3rem;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.empty { text-align: center; color: #94a3b8; padding: 24px 0; display: none; }
+
+/* Footer */
+.footer { display: flex; justify-content: space-between; align-items: center; margin-top: 14px; font-size: 0.9rem; color: #64748b; }
+.link { border: 0; background: none; color: #ef4444; cursor: pointer; font-size: 0.9rem; }
+.link:hover { text-decoration: underline; }
